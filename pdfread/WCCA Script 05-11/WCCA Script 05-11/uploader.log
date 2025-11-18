@@ -1,0 +1,211 @@
+2025-11-04 20:03:37,641 ERROR:bad delimiter value
+Traceback (most recent call last):
+  File "C:\Users\Trewin Fernando\Documents\New folder\New folder\Interface.py", line 288, in _browse_file
+    self.part_numbers = self._extract_part_numbers_from_csv(filepath, col=0)
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Trewin Fernando\Documents\New folder\New folder\Interface.py", line 320, in _extract_part_numbers_from_csv
+    has_header = csv.Sniffer().has_header(sample)
+  File "c:\Users\Trewin Fernando\AppData\Local\Python\pythoncore-3.14-64\Lib\csv.py", line 462, in has_header
+    rdr = reader(StringIO(sample), self.sniff(sample))
+ValueError: bad delimiter value
+2025-11-05 09:22:01,928 ERROR:'list' object cannot be interpreted as an integer
+Traceback (most recent call last):
+  File "c:\Users\harih\Documents\WCCA Script 04-11\Interface.py", line 442, in _browse_file
+    self.part_numbers = self._extract_part_numbers_from_csv(filepath, col=0)
+  File "c:\Users\harih\Documents\WCCA Script 04-11\Interface.py", line 496, in _extract_part_numbers_from_csv
+    for e in range(ref_num):
+TypeError: 'list' object cannot be interpreted as an integer
+2025-11-05 09:23:52,412 ERROR:'list' object cannot be interpreted as an integer
+Traceback (most recent call last):
+  File "c:\Users\harih\Documents\WCCA Script 04-11\Interface.py", line 442, in _browse_file
+    self.part_numbers = self._extract_part_numbers_from_csv(filepath, col=0)
+  File "c:\Users\harih\Documents\WCCA Script 04-11\Interface.py", line 496, in _extract_part_numbers_from_csv
+    for e in range(ref_num):
+TypeError: 'list' object cannot be interpreted as an integer
+2025-11-05 09:27:35,748 ERROR:'list' object cannot be interpreted as an integer
+Traceback (most recent call last):
+  File "c:\Users\harih\Documents\WCCA Script 04-11\Interface.py", line 442, in _browse_file
+    self.part_numbers = self._extract_part_numbers_from_csv(filepath, col=0)
+  File "c:\Users\harih\Documents\WCCA Script 04-11\Interface.py", line 496, in _extract_part_numbers_from_csv
+    for e in range(ref_num):
+TypeError: 'list' object cannot be interpreted as an integer
+2025-11-05 09:30:03,010 ERROR:400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'INVALID_ARGUMENT', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'API_KEY_INVALID', 'domain': 'googleapis.com', 'metadata': {'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'API key not valid. Please pass a valid API key.'}]}}
+Traceback (most recent call last):
+  File "c:\Users\harih\Documents\WCCA Script 04-11\Interface.py", line 442, in _browse_file
+    self.part_numbers = self._extract_part_numbers_from_csv(filepath, col=0)
+  File "c:\Users\harih\Documents\WCCA Script 04-11\Interface.py", line 503, in _extract_part_numbers_from_csv
+    genAi(chip)
+  File "c:\Users\harih\Documents\WCCA Script 04-11\gen_ai.py", line 6, in genAi
+    response = client.models.generate_content(model="gemini-2.0-flash", contents=prmp)
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\google\genai\models.py", line 5050, in generate_content
+    response = self._generate_content(
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\google\genai\models.py", line 3837, in _generate_content
+    response = self._api_client.request(
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\google\genai\_api_client.py", line 1331, in request
+    response = self._request(http_request, http_options, stream=False)
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\google\genai\_api_client.py", line 1167, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\tenacity\__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\tenacity\__init__.py", line 378, in iter
+    result = action(retry_state)
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\tenacity\__init__.py", line 420, in exc_check
+    raise retry_exc.reraise()
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\tenacity\__init__.py", line 187, in reraise
+    raise self.last_attempt.result()
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\concurrent\futures\_base.py", line 438, in result
+    return self.__get_result()
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\concurrent\futures\_base.py", line 390, in __get_result
+    raise self._exception
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\tenacity\__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\google\genai\_api_client.py", line 1144, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\google\genai\errors.py", line 108, in raise_for_response
+    raise ClientError(status_code, response_json, response)
+google.genai.errors.ClientError: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'INVALID_ARGUMENT', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'API_KEY_INVALID', 'domain': 'googleapis.com', 'metadata': {'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'API key not valid. Please pass a valid API key.'}]}}
+2025-11-05 09:31:14,705 ERROR:400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'INVALID_ARGUMENT', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'API_KEY_INVALID', 'domain': 'googleapis.com', 'metadata': {'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'API key not valid. Please pass a valid API key.'}]}}
+Traceback (most recent call last):
+  File "c:\Users\harih\Documents\WCCA Script 04-11\Interface.py", line 442, in _browse_file
+    self.part_numbers = self._extract_part_numbers_from_csv(filepath, col=0)
+  File "c:\Users\harih\Documents\WCCA Script 04-11\Interface.py", line 503, in _extract_part_numbers_from_csv
+    genAi(chip)
+  File "c:\Users\harih\Documents\WCCA Script 04-11\gen_ai.py", line 6, in genAi
+    response = client.models.generate_content(model="gemini-2.0-flash", contents=prmp)
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\google\genai\models.py", line 5050, in generate_content
+    response = self._generate_content(
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\google\genai\models.py", line 3837, in _generate_content
+    response = self._api_client.request(
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\google\genai\_api_client.py", line 1331, in request
+    response = self._request(http_request, http_options, stream=False)
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\google\genai\_api_client.py", line 1167, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\tenacity\__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\tenacity\__init__.py", line 378, in iter
+    result = action(retry_state)
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\tenacity\__init__.py", line 420, in exc_check
+    raise retry_exc.reraise()
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\tenacity\__init__.py", line 187, in reraise
+    raise self.last_attempt.result()
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\concurrent\futures\_base.py", line 438, in result
+    return self.__get_result()
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\concurrent\futures\_base.py", line 390, in __get_result
+    raise self._exception
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\tenacity\__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\google\genai\_api_client.py", line 1144, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\google\genai\errors.py", line 108, in raise_for_response
+    raise ClientError(status_code, response_json, response)
+google.genai.errors.ClientError: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'INVALID_ARGUMENT', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'API_KEY_INVALID', 'domain': 'googleapis.com', 'metadata': {'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'API key not valid. Please pass a valid API key.'}]}}
+2025-11-05 09:33:48,192 ERROR:400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'INVALID_ARGUMENT', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'API_KEY_INVALID', 'domain': 'googleapis.com', 'metadata': {'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'API key not valid. Please pass a valid API key.'}]}}
+Traceback (most recent call last):
+  File "c:\Users\harih\Documents\WCCA Script 04-11\Interface.py", line 442, in _browse_file
+    self.part_numbers = self._extract_part_numbers_from_csv(filepath, col=0)
+  File "c:\Users\harih\Documents\WCCA Script 04-11\Interface.py", line 503, in _extract_part_numbers_from_csv
+    name=genAi(chip)
+  File "c:\Users\harih\Documents\WCCA Script 04-11\gen_ai.py", line 6, in genAi
+    response = client.models.generate_content(model="gemini-2.0-flash", contents=prmp)
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\google\genai\models.py", line 5050, in generate_content
+    response = self._generate_content(
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\google\genai\models.py", line 3837, in _generate_content
+    response = self._api_client.request(
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\google\genai\_api_client.py", line 1331, in request
+    response = self._request(http_request, http_options, stream=False)
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\google\genai\_api_client.py", line 1167, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\tenacity\__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\tenacity\__init__.py", line 378, in iter
+    result = action(retry_state)
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\tenacity\__init__.py", line 420, in exc_check
+    raise retry_exc.reraise()
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\tenacity\__init__.py", line 187, in reraise
+    raise self.last_attempt.result()
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\concurrent\futures\_base.py", line 438, in result
+    return self.__get_result()
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\concurrent\futures\_base.py", line 390, in __get_result
+    raise self._exception
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\tenacity\__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\google\genai\_api_client.py", line 1144, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\google\genai\errors.py", line 108, in raise_for_response
+    raise ClientError(status_code, response_json, response)
+google.genai.errors.ClientError: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'INVALID_ARGUMENT', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'API_KEY_INVALID', 'domain': 'googleapis.com', 'metadata': {'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'API key not valid. Please pass a valid API key.'}]}}
+2025-11-05 09:34:22,020 ERROR:400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'INVALID_ARGUMENT', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'API_KEY_INVALID', 'domain': 'googleapis.com', 'metadata': {'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'API key not valid. Please pass a valid API key.'}]}}
+Traceback (most recent call last):
+  File "c:\Users\harih\Documents\WCCA Script 04-11\Interface.py", line 442, in _browse_file
+    self.part_numbers = self._extract_part_numbers_from_csv(filepath, col=0)
+  File "c:\Users\harih\Documents\WCCA Script 04-11\Interface.py", line 503, in _extract_part_numbers_from_csv
+    name=genAi(chip)
+  File "c:\Users\harih\Documents\WCCA Script 04-11\gen_ai.py", line 6, in genAi
+    response = client.models.generate_content(model="gemini-2.0-flash", contents=prmp)
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\google\genai\models.py", line 5050, in generate_content
+    response = self._generate_content(
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\google\genai\models.py", line 3837, in _generate_content
+    response = self._api_client.request(
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\google\genai\_api_client.py", line 1331, in request
+    response = self._request(http_request, http_options, stream=False)
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\google\genai\_api_client.py", line 1167, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\tenacity\__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\tenacity\__init__.py", line 378, in iter
+    result = action(retry_state)
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\tenacity\__init__.py", line 420, in exc_check
+    raise retry_exc.reraise()
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\tenacity\__init__.py", line 187, in reraise
+    raise self.last_attempt.result()
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\concurrent\futures\_base.py", line 438, in result
+    return self.__get_result()
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\concurrent\futures\_base.py", line 390, in __get_result
+    raise self._exception
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\tenacity\__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\google\genai\_api_client.py", line 1144, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "C:\Users\harih\AppData\Local\Programs\python\Python310\lib\site-packages\google\genai\errors.py", line 108, in raise_for_response
+    raise ClientError(status_code, response_json, response)
+google.genai.errors.ClientError: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'INVALID_ARGUMENT', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'API_KEY_INVALID', 'domain': 'googleapis.com', 'metadata': {'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'API key not valid. Please pass a valid API key.'}]}}
+2025-11-05 10:09:58,728 ERROR:list index out of range
+Traceback (most recent call last):
+  File "c:\Users\Trewin Fernando\Downloads\WCCA Script 04-11 (1)\WCCA Script 04-11\Interface.py", line 443, in _browse_file
+    self.part_numbers = self._extract_part_numbers_from_csv(filepath, col=0)
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "c:\Users\Trewin Fernando\Downloads\WCCA Script 04-11 (1)\WCCA Script 04-11\Interface.py", line 489, in _extract_part_numbers_from_csv
+    val1 = row[col+1].strip()
+           ~~~^^^^^^^
+IndexError: list index out of range
+2025-11-05 10:11:02,319 ERROR:No module named 'google'
+Traceback (most recent call last):
+  File "c:\Users\Trewin Fernando\Downloads\WCCA Script 04-11 (1)\WCCA Script 04-11\Interface.py", line 443, in _browse_file
+    self.part_numbers = self._extract_part_numbers_from_csv(filepath, col=0)
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "c:\Users\Trewin Fernando\Downloads\WCCA Script 04-11 (1)\WCCA Script 04-11\Interface.py", line 504, in _extract_part_numbers_from_csv
+    self.names=genAi(chip)
+               ~~~~~^^^^^^
+  File "c:\Users\Trewin Fernando\Downloads\WCCA Script 04-11 (1)\WCCA Script 04-11\gen_ai.py", line 2, in genAi
+    from google import genai
+ModuleNotFoundError: No module named 'google'
+2025-11-05 10:20:17,366 ERROR:No module named 'google'
+Traceback (most recent call last):
+  File "c:\Users\Trewin Fernando\Downloads\WCCA Script 04-11 (1)\WCCA Script 04-11\Interface.py", line 443, in _browse_file
+    self.part_numbers = self._extract_part_numbers_from_csv(filepath, col=0)
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "c:\Users\Trewin Fernando\Downloads\WCCA Script 04-11 (1)\WCCA Script 04-11\Interface.py", line 504, in _extract_part_numbers_from_csv
+    self.names=genAi(chip)
+               ~~~~~^^^^^^
+  File "c:\Users\Trewin Fernando\Downloads\WCCA Script 04-11 (1)\WCCA Script 04-11\gen_ai.py", line 2, in genAi
+    from google import genai
+ModuleNotFoundError: No module named 'google'
+2025-11-04 22:23:30,888 ERROR:cannot import name 'genai' from 'google' (unknown location)
+Traceback (most recent call last):
+  File "c:\Users\capab\Documents\WCCA Script 05-11\WCCA Script 05-11\Interface.py", line 443, in _browse_file
+    self.part_numbers = self._extract_part_numbers_from_csv(filepath, col=0)
+  File "c:\Users\capab\Documents\WCCA Script 05-11\WCCA Script 05-11\Interface.py", line 504, in _extract_part_numbers_from_csv
+    self.names=genAi(chip)
+  File "c:\Users\capab\Documents\WCCA Script 05-11\WCCA Script 05-11\gen_ai.py", line 2, in genAi
+    from google import genai
+ImportError: cannot import name 'genai' from 'google' (unknown location)

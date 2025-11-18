@@ -1,0 +1,118 @@
+.file-uploader {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+  flex: 1;
+}
+
+.uploader-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.upload-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.file-label {
+  color: #fff;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.file-input {
+  flex: 1;
+  padding: 8px 12px;
+  background-color: #24143a;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 0.9rem;
+}
+
+.file-input::placeholder {
+  color: #bcb4d5;
+}
+
+.browse-btn {
+  background-color: #7c5fff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.browse-btn:hover:not(:disabled) {
+  background-color: #9b7cff;
+}
+
+.browse-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #ff6b6b;
+  font-size: 0.85rem;
+  padding: 4px 0;
+}
+
+.preview-section {
+  margin-top: 8px;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.preview-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.preview-box {
+  background-color: #39275c;
+  border-radius: 4px;
+  padding: 12px;
+  height: 250px;
+  overflow: auto;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.preview-content {
+  color: #fff;
+  font-family: 'Consolas', monospace;
+  font-size: 0.85rem;
+  margin: 0;
+  white-space: pre;
+  word-wrap: normal;
+  overflow-wrap: normal;
+}
+
+.preview-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+  color: #bcb4d5;
+  gap: 12px;
+}
+
+.preview-placeholder p {
+  margin: 0;
+  font-size: 0.9rem;
+}

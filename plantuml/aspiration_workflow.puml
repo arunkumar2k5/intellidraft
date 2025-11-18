@@ -1,0 +1,80 @@
+@startuml aspiration_workflow
+!theme plain
+skinparam backgroundColor #FEFEFE
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
+
+title Aspiration Workflow - Sample Collection Device Warning
+
+|System|
+start
+:Start Aspiration Process;
+
+|User Interface|
+:Display Warning Message;
+note right
+  **WARNING**
+  Aspiration in Progress
+  DO NOT remove sample 
+  collection device
+end note
+
+:Show Progress Indicator;
+note right
+  Visual feedback:
+  - Progress bar
+  - Animated icon
+  - Status text
+end note
+
+|System|
+:Perform Aspiration;
+note left
+  System actively 
+  aspirating sample
+end note
+
+|User Interface|
+:Continuously Display Warning;
+note right
+  Keep warning visible
+  throughout entire
+  aspiration process
+end note
+
+|System|
+if (Aspiration Complete?) then (yes)
+  |User Interface|
+  :Clear Warning Message;
+  :Display Completion Status;
+  note right
+    "Aspiration Complete"
+    "Safe to remove device"
+  end note
+  
+  |System|
+  :Enable Device Removal;
+  stop
+else (no)
+  |System|
+  :Continue Aspiration;
+  note left
+    Monitor for:
+    - Completion
+    - Errors
+    - User interruption
+  end note
+  
+  if (Error Detected?) then (yes)
+    |User Interface|
+    :Display Error Message;
+    :Clear Warning;
+    stop
+  else (no)
+    |System|
+    :Continue Process;
+    detach
+  endif
+endif
+
+@enduml

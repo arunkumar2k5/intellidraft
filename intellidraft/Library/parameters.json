@@ -1,0 +1,77 @@
+{
+  "resistor": {
+    "description": "Passive two-terminal component that implements electrical resistance.",
+    "key_parameters": [
+      "resistance",
+      "resistance_tolerance",
+      "power_rating",
+      "temperature_coefficient",
+      "package_case",
+      "mounting_type",
+      "operating_temperature",
+      "series",
+      "supplier_device_package"
+    ]
+  },
+  "capacitor": {
+    "description": "Passive component that stores energy in an electric field.",
+    "key_parameters": [
+      "capacitance",
+      "capacitance_tolerance",
+      "voltage_rated",
+      "dielectric_material",
+      "esr",
+      "temperature_coefficient",
+      "package_case",
+      "mounting_type",
+      "operating_temperature",
+      "series"
+    ]
+  },
+  "inductor": {
+    "description": "Passive component that stores energy in a magnetic field.",
+    "key_parameters": [
+      "inductance",
+      "inductance_tolerance",
+      "current_rated",
+      "saturation_current",
+      "dc_resistance_dcr",
+      "shielding",
+      "package_case",
+      "mounting_type",
+      "operating_temperature",
+      "series"
+    ]
+  },
+  "diode": {
+    "description": "Two-terminal semiconductor device that conducts current primarily in one direction.",
+    "key_parameters": [
+      "diode_type",
+      "voltage_dc_reverse_vr_max",
+      "current_average_rectified_io",
+      "forward_voltage_vf",
+      "reverse_recovery_time_trr",
+      "power_dissipation_max",
+      "package_case",
+      "mounting_type",
+      "operating_temperature",
+      "series"
+    ]
+  },
+  "transistor": {
+    "description": "Semiconductor device used to amplify or switch electronic signals.",
+    "key_parameters": [
+      "transistor_type",
+      "configuration",
+      "voltage_collector_emitter_vce_max",
+      "current_collector_ic_max",
+      "dc_current_gain_hfe",
+      "power_dissipation_max",
+      "frequency_transition_ft",
+      "package_case",
+      "mounting_type",
+      "operating_temperature",
+      "series"
+    ]
+  }
+}

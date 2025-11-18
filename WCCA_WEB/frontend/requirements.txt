@@ -1,0 +1,18 @@
+# Frontend uses Node.js and npm for dependency management
+# All dependencies are defined in package.json
+# 
+# To install frontend dependencies, run:
+#   npm install
+# 
+# Or if you prefer yarn:
+#   yarn install
+#
+# This file is provided for reference only.
+# The actual dependencies are managed through package.json
+
+# Main dependencies (installed via npm):
+# - react: ^18.2.0
+# - react-dom: ^18.2.0
+# - axios: ^1.6.0
+# - lucide-react: ^0.294.0
+# - react-scripts: 5.0.1

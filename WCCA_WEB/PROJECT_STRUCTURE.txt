@@ -1,0 +1,96 @@
+WCCA/ (Project Root)
+│
+├── 📁 backend/                          # Flask Backend Server
+│   ├── app.py                          # Main Flask API (REST endpoints)
+│   ├── __init__.py                     # Python package init
+│   └── .env.example                    # Environment config template
+│
+├── 📁 frontend/                         # React Frontend Application
+│   ├── 📁 public/
+│   │   └── index.html                  # HTML template
+│   │
+│   ├── 📁 src/
+│   │   ├── 📁 components/              # React Components
+│   │   │   ├── FileUploader.js        # File upload component
+│   │   │   ├── FileUploader.css       # Upload styling
+│   │   │   ├── PartsTable.js          # Parts data table
+│   │   │   ├── PartsTable.css         # Table styling
+│   │   │   ├── CircuitNameDialog.js   # Circuit name modal
+│   │   │   ├── CircuitNameDialog.css  # Dialog styling
+│   │   │   ├── ProgressIndicator.js   # Progress circle
+│   │   │   └── ProgressIndicator.css  # Progress styling
+│   │   │
+│   │   ├── App.js                      # Main React app
+│   │   ├── App.css                     # App styling
+│   │   ├── index.js                    # React entry point
+│   │   └── index.css                   # Global styles
+│   │
+│   ├── package.json                    # Node dependencies
+│   ├── .gitignore                      # Git ignore rules
+│   └── .env.example                    # Frontend config template
+│
+├── 📄 digikey.py                        # DigiKey API integration (shared)
+├── 📄 gen_ai.py                         # Google GenAI integration (shared)
+├── 📄 excel_to_json.py                  # Excel conversion utility (shared)
+├── 📄 json_table.py                     # Legacy Tkinter helper (not used in web)
+├── 📄 main.py                           # Original Tkinter app (preserved)
+│
+├── 📄 requirements.txt                  # Python dependencies (updated)
+├── 📄 parts.json                        # Generated parts data (runtime)
+├── 📄 uploader.log                      # Application logs (runtime)
+│
+├── 📁 venv/                             # Python virtual environment
+│
+├── 📄 Constraints.yaml                  # Sample constraint file
+├── 📄 LDO BOM.csv                       # Sample BOM file
+├── 📄 LDO.xlsx                          # Sample Excel file
+├── 📄 netlist.xml                       # Sample netlist file
+├── 📄 Samplelogo.png                    # Application logo
+│
+├── 🚀 start_backend.bat                 # Quick start backend (Windows)
+├── 🚀 start_frontend.bat                # Quick start frontend (Windows)
+│
+├── 📖 README.md                         # Original README
+├── 📖 README.txt                        # Original README (text)
+├── 📖 README_WEB.md                     # Web version documentation
+├── 📖 QUICKSTART.md                     # Quick start guide
+├── 📖 MIGRATION_SUMMARY.md              # Conversion summary
+└── 📖 PROJECT_STRUCTURE.txt             # This file
+
+═══════════════════════════════════════════════════════════════════
+
+KEY FILES TO KNOW:
+
+🔧 BACKEND (Flask):
+   backend/app.py              - Main API server with all endpoints
+
+🎨 FRONTEND (React):
+   frontend/src/App.js         - Main application logic
+   frontend/src/components/    - Reusable UI components
+
+🔗 SHARED MODULES:
+   digikey.py                  - DigiKey API calls
+   gen_ai.py                   - AI circuit identification
+   excel_to_json.py            - Excel processing
+
+📦 CONFIGURATION:
+   requirements.txt            - Python packages
+   frontend/package.json       - Node packages
+
+🚀 QUICK START:
+   start_backend.bat           - Start Flask server
+   start_frontend.bat          - Start React dev server
+
+📚 DOCUMENTATION:
+   README_WEB.md               - Full documentation
+   QUICKSTART.md               - Getting started guide
+   MIGRATION_SUMMARY.md        - What changed from Tkinter
+
+═══════════════════════════════════════════════════════════════════
+
+RUNTIME FOLDERS (Created automatically):
+   ~/WCCA_Uploads/             - Uploaded files storage
+   frontend/node_modules/      - Node.js packages
+   frontend/build/             - Production build output
+
+═══════════════════════════════════════════════════════════════════

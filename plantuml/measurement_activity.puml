@@ -1,0 +1,61 @@
+@startuml MeasurementSystemActivity
+
+start
+
+:Place sample container in inlet;
+note right
+  Container can remain
+  in inlet during operation
+end note
+
+:Enter mandatory inputs;
+
+if (All mandatory inputs entered?) then (yes)
+  
+  fork
+    :Start measurement;
+    :Process sample;
+    
+    if (Results available?) then (yes)
+      :Display results immediately;
+      
+      fork
+        :Show results on display;
+      fork again
+        if (Automatic printout enabled?) then (yes)
+          :Print results automatically;
+        else (no)
+          if (User requests print?) then (yes)
+            :Print results manually;
+          endif
+        endif
+      end fork
+      
+    endif
+    
+  fork again
+    :Monitor for additional samples;
+    note right
+      System allows continuous
+      operation with container
+      in inlet
+    end note
+  end fork
+
+else (no)
+  :Suppress result display;
+  note right
+    Results hidden until
+    all mandatory inputs
+    are provided
+  end note
+  
+  :Wait for mandatory inputs;
+  detach
+endif
+
+:Measurement complete;
+
+stop
+
+@enduml

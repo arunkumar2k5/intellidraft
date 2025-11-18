@@ -1,0 +1,180 @@
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.dialog-content {
+  background-color: #2f1d4a;
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: #bcb4d5;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.close-btn:hover {
+  color: #fff;
+}
+
+.dialog-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.circuit-name-display {
+  background-color: #39275c;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circuit-name {
+  color: #fff;
+  font-size: 1.1rem;
+  text-align: center;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  color: #bcb4d5;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.manual-input-section {
+  margin-bottom: 24px;
+}
+
+.manual-input {
+  width: 100%;
+  padding: 12px 16px;
+  background-color: #39275c;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  transition: border-color 0.2s;
+}
+
+.manual-input:focus {
+  outline: none;
+  border-color: #7c5fff;
+}
+
+.manual-input::placeholder {
+  color: #bcb4d5;
+}
+
+.dialog-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 140px;
+}
+
+.btn-primary {
+  background-color: #7c5fff;
+  color: #fff;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #9b7cff;
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background-color: #24143a;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #39275c;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}

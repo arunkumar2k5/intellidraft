@@ -1,0 +1,14 @@
+# Core dependencies
+requests>=2.31.0
+pandas>=2.0.0
+openpyxl>=3.1.0
+
+# Google Generative AI
+google-genai>=0.2.0
+
+# Flask backend dependencies
+Flask>=3.0.0
+Flask-CORS>=4.0.0
+Werkzeug>=3.0.0
+
+# Note: csv, json, logging, os, shutil, threading, pathlib are included with Python standard library

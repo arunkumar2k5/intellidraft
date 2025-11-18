@@ -1,0 +1,76 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #24143a;
+}
+
+.card {
+  background-color: #2f1d4a;
+  border-radius: 12px;
+  padding: 40px;
+  width: 90%;
+  max-width: 1400px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+.parts-section {
+  margin: 30px 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.circuit-btn {
+  background-color: #7c5fff;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.circuit-btn:hover {
+  background-color: #9b7cff;
+}
+
+.circuit-btn:active {
+  transform: scale(0.98);
+}
+
+.note {
+  text-align: right;
+  color: #bcb4d5;
+  font-size: 0.9rem;
+  margin-top: 20px;
+}

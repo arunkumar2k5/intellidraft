@@ -1,0 +1,51 @@
+design_considerations:
+  input_voltage:
+    tolerance: ±5%
+    note: "Taken from the regulator supply input for sample version assumption."
+
+  load_current:
+    tolerance: ±5%
+    note: "To be defined as per camera system requirement."
+
+  output_voltage:
+    tolerance: ±5%
+    note: "To be defined as per camera system requirement."
+
+  resistor_tolerance:
+    factors:
+      - temperature_drift
+      - aging
+      - manufacturing_tolerance
+    note: "Overall tolerance includes combined effects of temperature, aging, and production spread."
+
+  capacitor_tolerance:
+    factors:
+      - temperature_drift
+      - aging
+      - manufacturing_tolerance
+    note: "Includes drift and degradation due to temperature and aging."
+
+  power_design:
+    camera_consumption:
+      typical: 165mA
+      maximum_design: 210mA
+      note: "Designed for 210mA max to ensure margin over expected 165mA camera load."
+
+  thermal_conditions:
+    ambient_temperature_max: 85°C
+    board_temperature_max: 100°C
+    margin_added: 15°C
+    note: "15°C added to account for on-board thermal rise above ambient."
+
+  resistor_derating:
+    factor: 0.6
+    reason: "Derating by 60% for power dissipation based on 100°C board temperature."
+
+  temperature_dependency:
+    note: "Pull-up and pull-down internal resistor values are calculated without temperature variation graph data."
+
+metadata:
+  author: "Arun"
+  context: "Camera power regulation design using TPS7B7701-Q1"
+  version: 1.0
+  units: SI

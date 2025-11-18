@@ -1,0 +1,45 @@
+@startuml MeasurementSystemUseCases
+
+left to right direction
+skinparam packageStyle rectangle
+
+actor "User/Operator" as User
+actor "System" as System
+
+rectangle "Measurement System" {
+  usecase "Display results as soon as available" as UC1
+  usecase "Leave sample container in inlet" as UC2
+  usecase "Display measurement results" as UC3
+  usecase "Print measurement results" as UC4
+  usecase "Suppress result display\nuntil mandatory inputs entered" as UC5
+  usecase "Set automatic printout" as UC6
+  usecase "Enter mandatory inputs" as UC7
+}
+
+User --> UC2
+User --> UC3
+User --> UC4
+User --> UC6
+User --> UC7
+
+System --> UC1
+System --> UC5
+
+UC1 ..> UC7 : <<requires>>
+UC3 ..> UC7 : <<requires>>
+UC5 ..> UC7 : <<validates>>
+UC4 ..> UC3 : <<extends>>
+UC6 ..> UC4 : <<configures>>
+
+note right of UC5
+  Results are hidden until
+  all mandatory inputs are
+  provided by the user
+end note
+
+note right of UC2
+  Sample container can remain
+  in the inlet during operation
+end note
+
+@enduml

@@ -1,0 +1,5 @@
+@startuml UserServerInteraction
+actor User
+User -> Server: Request
+Server --> User: Response
+@enduml

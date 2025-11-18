@@ -1,0 +1,123 @@
+NET 12V_REG
+ U1-IN
+ C1-1
+ C5-1
+ C7-1
+
+NET GND
+ U1-GND
+ U1-EPAD
+ C1-2
+ C2-2
+ C3-2
+ C4-2
+ C5-2
+ C6-2
+ C7-2
+ C8-2
+ R_EN_PD-2
+ R_ERR-2
+ R_LIMIT-2
+
+NET TO_CAM_PSU
+ U1-OUT
+ C2-1
+ C6-1
+ ; output rail to camera PSU
+
+NET FB
+ U1-FB
+ R1-2
+ R6-2
+
+NET OUT_FB_TOP
+ R1-1
+ ; connects to Vout (TO_CAM_PSU)
+ ; short alias to help some importers
+ TO_CAM_PSU
+
+NET FB_DIVIDER_BOTTOM
+ R6-1
+ GND
+
+NET TO_MCU_EN
+ U1-EN
+ R_EN_PD-1
+ C4-1
+ ; external MCU drives this net
+ TO_MCU
+
+NET TO_MCU_ERR
+ U1-ERR
+ R_ERR-1
+ ; R_ERR pulled up to 3V3
+ TO_MCU
+
+NET 3V3
+ R_ERR-1
+ ; pull-up for open-drain ERR
+
+NET SENSE
+ U1-SENSE
+ R_SENSE-1
+ R4-2
+ R5-1
+ C3-1
+
+NET SENSE_EN
+ U1-SENSE_EN
+ R7-1
+ C8-1
+
+NET SENSE_EN_PULL
+ R7-2
+ 12V_REG
+
+NET TO_ADC
+ R4-1
+ R5-2
+ ; left-side ADC monitor node (across shunt/RC)
+
+NET LIM
+ U1-LIM
+ R_LIMIT-1
+
+NET VCC_PIN
+ U1-VCC
+ C5-1
+
+; convenience short names for labeled ports on the right
+NET TO_ADC_RIGHT
+ ; image shows a second "TO_ADC" near output filtering
+ ; tie to same ADC rail if intended:
+ TO_ADC
+
+NET TO_MCU
+ ; label target bus to MCU, already referenced above
+[NETLIST]
+[PARTS]
+U1  TPS7B7701Q1  IC
+R1  71.5k 0.1%   RES
+R2  10k          RES
+R4  750R 1%      RES
+R5  750R 1%      RES
+R6  33k 1%       RES
+R7  4.7k 1%      RES
+R_ERR 10k        RES
+R_EN_PD 10k      RES
+R_SENSE FIXME    RES
+R_LIMIT FIXME    RES
+C1  10uF 50V     CAP
+C2  10uF FIXME   CAP
+C3  10uF 16V     CAP
+C4  100nF 25V    CAP
+C5  10uF 50V     CAP
+C6  100nF FIXME  CAP
+C7  1uF 50V      CAP
+C8  1uF 16V      CAP
+[END PARTS]
+
+[NETS]
+    
+[END NETS]
+[END NETLIST]
