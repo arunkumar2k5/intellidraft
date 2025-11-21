@@ -34,56 +34,11 @@ async def update_functional_description(
         # Load the template document
         doc = Document(template_path)
         
-        # Find section 2 (Functional Description)
-        section_found = False
-        section_index = None
-        
-        for i, paragraph in enumerate(doc.paragraphs):
-            text = paragraph.text.strip()
-            # Look for "2" or "2." followed by "Functional Description" (case insensitive)
-            if ("2" in text or "2." in text) and "functional description" in text.lower():
-                section_found = True
-                section_index = i
-                break
-        
-        if not section_found:
-            return {
-                "error": "Functional Description section not found in template",
-                "success": False
-            }
-        
-        # Clear content after the section heading until next section
-        # Find the next section (starts with "3" or next numbered section)
-        next_section_index = None
-        for i in range(section_index + 1, len(doc.paragraphs)):
-            text = doc.paragraphs[i].text.strip()
-            if text.startswith("3") or text.startswith("3."):
-                next_section_index = i
-                break
-        
-        # Remove paragraphs between section 2 and section 3
-        if next_section_index:
-            for i in range(next_section_index - 1, section_index, -1):
-                p = doc.paragraphs[i]
-                p._element.getparent().remove(p._element)
-        
-        # Insert new content after section heading
-        insert_position = section_index + 1
-        
-        # Add description if provided
-        if description:
-            p = doc.paragraphs[section_index]._element.getparent().insert(
-                insert_position,
-                doc.add_paragraph(description)._element
-            )
-            insert_position += 1
-            
-            # Add blank line
-            doc.paragraphs[section_index]._element.getparent().insert(
-                insert_position,
-                doc.add_paragraph()._element
-            )
-            insert_position += 1
+        # Simple approach: Add parameter table at the end of the document
+        print(f"\n=== Adding parameter table to end of document ===")
+        print(f"Part Number: {part_number}")
+        print(f"Component Type: {component_type}")
+        print(f"Parameters: {len(parameters)} items\n")
         
         # Create parameters table
         # Insert after the description
@@ -120,12 +75,7 @@ async def update_functional_description(
             row_cells[0].text = str(param_name)
             row_cells[1].text = str(param_value)
         
-        # Move table to correct position
-        table_element = table._element
-        doc.paragraphs[section_index]._element.getparent().insert(
-            insert_position,
-            table_element
-        )
+        # Table is already added to the document (no need to move it)
         
         # Generate output filename
         # Clean part number for filename

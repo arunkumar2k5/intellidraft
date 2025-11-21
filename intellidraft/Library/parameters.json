@@ -3,11 +3,11 @@
     "description": "Passive two-terminal component that implements electrical resistance.",
     "key_parameters": [
       "resistance",
-      "resistance_tolerance",
-      "power_rating",
+      "Tolerance",
+      "Power (Watts)",
       "temperature_coefficient",
-      "package_case",
-      "mounting_type",
+      "Package / Case",
+      "Composition",
       "operating_temperature",
       "series",
       "supplier_device_package"
